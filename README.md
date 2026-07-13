@@ -1,75 +1,168 @@
-# React + TypeScript + Vite
+# 🎬 Studio Ghibli Films
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React and TypeScript application that consumes the public Studio Ghibli API.
 
-Currently, two official plugins are available:
+The application displays the first 10 Studio Ghibli films in alphabetical order and allows users to view detailed information about each movie.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Add screenshots or a GIF of your application here.
 
-## Expanding the ESLint configuration
+```md
+![Home](./public/home.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+![Details](./public/details.png)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Display the first 10 Studio Ghibli films
+- Sort movies alphabetically
+- View detailed information for each movie
+- Client-side routing with React Router
+- Loading and error handling
+- Responsive interface
+- Data fetching and caching with React Query
+- Fully typed with TypeScript
 
+---
+
+## 📄 Movie Details
+
+### Home Page
+
+- Movie poster
+- Movie title
+
+### Details Page
+
+- Title
+- Original title
+- Director
+- Producer
+- Release year
+- Rotten Tomatoes score
+- Description
+
+---
+
+## 🚀 Technologies
+
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- TanStack React Query
+- Tailwind CSS
+
+---
+
+## 🌐 API
+
+This project uses the public Studio Ghibli API:
+
+```text
+https://ghibliapi.vercel.app/films
 ```
+
+---
+
+## 📁 Project Structure
+
+```text
+src
+├── components
+│   ├── Header
+│   └── Layout
+│
+├── hooks
+│   └── useFilms.tsx
+│
+├── pages
+│   ├── Home
+│   └── FilmDetail
+│
+├── routes
+│   └── index.tsx
+│
+├── styles
+│   └── global.css
+│
+├── types
+│   └── types.ts
+│
+├── App.tsx
+└── main.tsx
+```
+
+---
+
+## ▶️ Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+```
+
+Navigate to the project folder
+
+```bash
+cd YOUR_REPOSITORY
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Open your browser and visit
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🛣️ Routes
+
+| Route | Description |
+|-------|-------------|
+| `/` | Displays the list of movies |
+| `/films/:id` | Displays movie details |
+
+---
+
+## 📚 Concepts Practiced
+
+- REST API consumption
+- React Query
+- React Router
+- Component-based architecture
+- Custom Hooks
+- TypeScript
+- Data typing
+- Array sorting with `sort()`
+- Finding items with `find()`
+- Conditional rendering
+- Loading and error handling
+- Responsive UI development
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Israel Monteiro**
+
+GitHub: https://github.com/israel-monteiro
