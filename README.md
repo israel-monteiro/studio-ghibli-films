@@ -8,9 +8,6 @@ The application displays the first 10 Studio Ghibli films in alphabetical order 
 
 ## 📸 Preview
 
-> Add screenshots or a GIF of your application here.
-
-
 ![Home](./public/home.png)
 
 ![Details](./public/details.png)
